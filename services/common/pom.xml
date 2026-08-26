@@ -7,7 +7,7 @@
 
     <parent>
         <groupId>cn.huntercat</groupId>
-        <artifactId>lieshoucloud-services-open</artifactId>
+        <artifactId>lieshoucloud-common-parent</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
