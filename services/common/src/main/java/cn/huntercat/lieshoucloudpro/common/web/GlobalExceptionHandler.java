@@ -62,6 +62,13 @@ public class GlobalExceptionHandler {
     return body(HttpStatus.NOT_FOUND, ErrorCode.NOT_FOUND, e.getMessage());
   }
 
+  /** 未注册路由 / 静态资源 404（如网关未开放端点、{@code /users/me/menus} 未实现时）→ 404 NOT_FOUND 契约体，而非兜底 500。 */
+  @ExceptionHandler(org.springframework.web.servlet.resource.NoResourceFoundException.class)
+  public ResponseEntity<Map<String, String>> onNoResource(
+      org.springframework.web.servlet.resource.NoResourceFoundException e) {
+    return body(HttpStatus.NOT_FOUND, ErrorCode.NOT_FOUND, "请求的资源不存在");
+  }
+
   /** 业务规则冲突（已认领 / 状态机冲突 / 不可转化等）→ 409 BUSINESS_CONFLICT（契约码稳定） */
   @ExceptionHandler(IllegalStateException.class)
   public ResponseEntity<Map<String, String>> onConflict(IllegalStateException e) {
