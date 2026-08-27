@@ -9,8 +9,8 @@
     <artifactId>lieshoucloud-common-parent</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
-    <name>LieShouCloud Open · Services Parent</name>
-    <description>LieShouCloud open-source core services parent</description>
+    <name>lieshou-cloud Open · Services Parent</name>
+    <description>lieshou-cloud open-source core services parent</description>
 
     <modules>
         <module>common</module>

@@ -12,7 +12,7 @@
     </parent>
 
     <artifactId>lieshoucloud-common</artifactId>
-    <name>LieShouCloud · Services Common</name>
+    <name>lieshou-cloud · Services Common</name>
     <description>底座共享（L2-1 · Bottom-Up）：统一异常体契约 + 全局异常处理器（GlobalExceptionHandler）</description>
 
     <dependencies>
